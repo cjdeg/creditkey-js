@@ -176,9 +176,11 @@ When a charges object is supplied, with subtotal, shipping, tax, discount and gr
 ```javascript
 import Client from 'creditkey-js';
 
+const client = new Client(your_credit_key_public_key);
+
 let marketingText;
 
-Client.get_marketing_display()
+client.get_marketing_display()
   .then(res => marketingText = res);
 ```
 
@@ -195,9 +197,11 @@ returns a json payload with `amount` and `amount_available`
 ```javascript
 import Client from 'creditkey-js';
 
+const client = new Client(your_credit_key_public_key);
+
 let userTcl;
 
-Client.get_customer()
+client.get_customer()
   .then(res => userTcl = res)
   .then(() => console.log(userTcl.amount, userTcl.amount_available));
 ```
