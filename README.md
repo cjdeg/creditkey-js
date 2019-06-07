@@ -184,6 +184,18 @@ client.get_marketing_display()
   .then(res => marketingText = res);
 ```
 
+When configured properly with `type="checkout"`, `display="text"` and a charges object, using jquery as an example, you could do something like:
+
+```
+var paymentLabel = $('#html-element-used-for-payment-label');
+paymentLabel.html(marketingText);
+```
+
+and you would see the following display replace the html for that element:
+
+<img src="https://creditkey-assets.s3-us-west-2.amazonaws.com/sdk/ck-checkout-sample.png" alt="drawing" width="300" />
+
+
 ## Configuring User Total Line of Credit Display
 --------------------------------
 
